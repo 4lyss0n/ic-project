@@ -1,0 +1,20 @@
+.slides-container {
+    background-color: #f0f;
+    position: relative;
+    height: 100vh;
+}
+
+.image-container {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 255, 0, 0.5);
+
+    z-index: 2;
+}
+
+.buttons-container {
+    background-color: aqua;
+    position: absolute;
+    z-index: 5;
+    inset: 0;
+}

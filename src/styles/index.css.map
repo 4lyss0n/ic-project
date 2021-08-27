@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACzB;;ACJD,AAAA,iBAAiB,CAAC;EACd,gBAAgB,EAAE,IAAI;EACtB,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,KAAK;CAChB;;AAED,AAAA,gBAAgB,CAAC;EACb,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,CAAC;EACR,gBAAgB,EAAE,oBAAoB;EAEtC,OAAO,EAAE,CAAC;CACb;;AAED,AAAA,kBAAkB,CAAC;EACf,gBAAgB,EAAE,IAAI;EACtB,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,CAAC;EACV,KAAK,EAAE,CAAC;CACX",
+    "sources": [
+        "index.scss",
+        "../sass/_reset.scss",
+        "../sass/_Slides.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}
