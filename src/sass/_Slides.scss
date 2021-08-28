@@ -2,19 +2,64 @@
     background-color: #f0f;
     position: relative;
     height: 100vh;
+
+    .image-container {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 255, 0, 0.5);
+        z-index: 2;
+        overflow: hidden;
+        * {
+            position: absolute;
+        }
+    }
+
+    .buttons-container {
+        position: absolute;
+        z-index: 5;
+        inset: 0;
+        button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-size: 3.5rem;
+            opacity: 0.3;
+            &:hover {
+                opacity: 1;
+            }
+
+            &:active {
+                transform: scale(0.9);
+            }
+            svg > * {
+                stroke: #ddd;
+            }
+        }
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
-.image-container {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 255, 0, 0.5);
-
-    z-index: 2;
+@keyframes OneCenter {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translate(0%);
+    }
 }
 
-.buttons-container {
-    background-color: aqua;
+@keyframes UnOneCenter {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translate(0%);
+    }
+}
+
+.absolute {
     position: absolute;
-    z-index: 5;
-    inset: 0;
 }
