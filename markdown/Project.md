@@ -12,6 +12,9 @@
     h2 {
         color:#FDF;
     }
+    body {
+        background-color:#282a36;
+    }
 </style>
 
 # "Ansiedade e Depressão"
