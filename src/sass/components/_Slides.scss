@@ -1,5 +1,4 @@
-.slides-container {
-    background-color: #f0f;
+.slide {
     position: relative;
     height: 100vh;
 
@@ -23,43 +22,20 @@
             border: none;
             outline: none;
             font-size: 3.5rem;
-            opacity: 0.3;
+            opacity: $slide-arrow-button-hover-opacity;
             &:hover {
-                opacity: 1;
+                opacity: $slide-arrow-button-default-opacity;
             }
 
             &:active {
                 transform: scale(0.9);
             }
             svg > * {
-                stroke: #ddd;
+                stroke: $slide-arrow-button-color;
             }
         }
-
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-}
-
-@keyframes OneCenter {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translate(0%);
-    }
-}
-
-@keyframes UnOneCenter {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translate(0%);
-    }
-}
-
-.absolute {
-    position: absolute;
 }

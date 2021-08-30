@@ -1,4 +1,6 @@
 @import "../sass/reset";
-@import "../sass/Slides";
-@import "../sass/VirtualPage";
+@import "../sass/variable";
+@import "../sass/animations";
 @import "../sass/scrollBarStyle";
+
+@import "../sass/components/index";

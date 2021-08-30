@@ -3,6 +3,8 @@ import { SlideImage } from '../'
 import type { ImageSlider } from '../SliderImage'
 
 import { GrNext } from 'react-icons/gr'
+import { delay, randomKey } from '../../utils'
+import { useCallback } from 'react'
 
 
 interface IProps {
@@ -19,13 +21,35 @@ const Component: FunctionComponent<IProps> = ({ ImageProps }) => {
     const [imageOut, setImageOut] = useState<JSX.Element>()
 
     const [showIndex, setShowIndex] = useState<[number, -1 | 1 | 0]>([0, 0])
+    const [key, setKey] = useState('')
+
+    const animation = (keyProp: string) => {
+        const key = document.querySelector('html')?.getAttribute('slide-animation-key')
+        if (keyProp == key) {
+            addStep(1)
+        }
+    }
+
+    useEffect(() => {
+        document.querySelector('html')?.setAttribute('slide-animation-key', key)
+    }, [key])
+
 
     useEffect(() => {
         if (!image) {
             setImage(<SlideImage {...ImageProps[showIndex[0]]} />)
+            delay(15 * 1000, '').then((props: string[]) => {
+                animation(props[0])
+            })
             return
         }
 
+
+        const newKey = randomKey(10)
+        delay(15 * 1000, newKey).then((props: string[]) => {
+            animation(props[0])
+        })
+        setKey(newKey)
 
         setImageOut(<SlideImage {...ImageProps[showIndex[0]]}
 
@@ -34,18 +58,13 @@ const Component: FunctionComponent<IProps> = ({ ImageProps }) => {
             }}
             onAnimationEnd={e => {
                 setImage(<SlideImage {...ImageProps[showIndex[0]]} />)
-
                 setImageOut(undefined)
+
             }}
         />)
-
-
-
-
-
-
-
     }, [showIndex])
+
+
 
 
     const addStep = (step: -1 | 1) => {
@@ -68,7 +87,7 @@ const Component: FunctionComponent<IProps> = ({ ImageProps }) => {
 
     return (
         <>
-            <div className="slides-container">
+            <div className="slide">
                 <div className="image-container">
                     {image}
                     {imageOut}
