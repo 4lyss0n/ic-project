@@ -253,7 +253,7 @@ div.VirtualPage {
 }
 
 .page-container footer {
-  height: 20vh;
+  min-height: 20vh;
   background-color: #94f;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -291,6 +291,7 @@ div.VirtualPage {
 .page-container footer .owners ul {
   font-size: 1.2rem;
   padding-top: 1rem;
+  padding-bottom: 1rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -301,6 +302,27 @@ div.VirtualPage {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.page-container footer .owners a {
+  text-decoration: none;
+}
+
+.page-container footer .owners a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+@media (max-width: 500px) {
+  .page-container footer .owners ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .page-container footer .copyright {
