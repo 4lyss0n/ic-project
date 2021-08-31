@@ -4,22 +4,48 @@
     p {
         font-size: 1.2rem;
     }
-}
-
-@media (min-width: 500px) {
-    .page-container {
-        width: 95%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    header {
+        flex: 1;
+        background-color: red;
     }
-}
-
-@media (min-width: 800px) {
-    .page-container {
-        width: 80%;
+    main {
+        flex: 1;
     }
-}
+    footer {
+        height: 20vh;
+        background-color: $footer-background-color;
+        * {
+            color: $footer-text-color;
+        }
+        display: flex;
+        flex-direction: column;
+        .owners {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h6 {
+                font-size: 1.5rem;
+            }
+            ul {
+                font-size: 1.2rem;
+                padding-top: 1rem;
+                flex: 1;
+                width: 75%;
+                list-style: none;
+                display: flex;
+                justify-content: space-around;
+            }
+        }
 
-@media (min-width: 801px) {
-    .page-container {
-        width: 75%;
+        .copyright {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 0.5rem;
+            text-align: center;
+            color: $footer-copy-text-color;
+        }
     }
 }

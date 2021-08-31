@@ -8,12 +8,8 @@ const Component: FunctionComponent<IProps> = ({ }) => {
     return (
         <>
             <Slides ImageProps={[
-                { color: '#f00' },
-                { color: '#ff0' },
-                { color: '#0f0' },
-                { color: '#0ff' },
-                { color: '#00f' },
-                { color: '#f0f' },
+                { color: '#a8f' },
+                { color: '#888' },
             ]} />
         </>
     )
