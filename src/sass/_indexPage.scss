@@ -1,0 +1,22 @@
+.page-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: auto;
+}
+
+@media (min-width: 500px) {
+    .page-container {
+        width: 95%;
+    }
+}
+
+@media (min-width: 800px) {
+    .page-container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 801px) {
+    .page-container {
+        width: 75%;
+    }
+}

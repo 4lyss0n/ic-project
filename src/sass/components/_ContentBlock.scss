@@ -1,0 +1,53 @@
+.content-block {
+    position: relative;
+    .title {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    button {
+        font-size: 2rem;
+
+        background-color: transparent;
+        border: none;
+        &:active {
+            transform: scale(0.9);
+        }
+        * {
+            stroke: #fff;
+            fill: #000;
+        }
+        .rotate {
+            transform: rotate(90deg);
+        }
+    }
+
+    .content {
+        background-color: #00000088;
+        color: #ddd;
+    }
+
+    .disnable {
+        animation: go-in 70ms forwards;
+    }
+    .enable {
+        animation: go-out 70ms forwards;
+    }
+}
+
+@keyframes go-in {
+    from {
+        transform: translateY(0%) scaleY(1);
+    }
+    to {
+        transform: translateY(-50%) scaleY(0);
+    }
+}
+
+@keyframes go-out {
+    from {
+        transform: translateY(-50%) scaleY(0);
+    }
+    to {
+        transform: translateY(0%) scaleY(1);
+    }
+}
