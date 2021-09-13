@@ -59,6 +59,30 @@
   }
 }
 
+body {
+  background-image: linear-gradient(45deg, #f4a, #b5f);
+  background-size: 300vw 300vh;
+  animation: bg-anim 10s linear infinite alternate-reverse;
+}
+
+@-webkit-keyframes bg-anim {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes bg-anim {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
 *::-webkit-scrollbar {
   width: 0px;
   height: 0px;
@@ -151,17 +175,12 @@
 
 .content-block button * {
   stroke: #fff;
-  fill: #000;
+  fill: #fff;
 }
 
 .content-block button .rotate {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-}
-
-.content-block .content {
-  background-color: #00000088;
-  color: #ddd;
 }
 
 .content-block .disnable {
@@ -223,7 +242,6 @@ div.VirtualPage {
 }
 
 .page-container {
-  background-color: rgba(0, 0, 0, 0.3);
   margin: auto;
   min-height: 100vh;
   display: -webkit-box;
@@ -233,6 +251,14 @@ div.VirtualPage {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-container * {
+  color: #fff;
+  fill: #ddd;
 }
 
 .page-container p {
@@ -240,21 +266,96 @@ div.VirtualPage {
 }
 
 .page-container header {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  background-color: red;
+  text-align: center;
+}
+
+.page-container header h1 {
+  font-size: 2.5rem;
+  padding: 2rem;
+}
+
+@media (min-width: 600px) {
+  .page-container main {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-container main .main-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .page-container main .main-content section {
+    margin: 0;
+  }
+}
+
+@media (min-width: 800px) {
+  .page-container main {
+    max-width: 75%;
+  }
 }
 
 .page-container main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.page-container main .main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px #000 solid;
+}
+
+.page-container main .main-content section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1rem;
+}
+
+.page-container main .main-content button {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+.page-container main .main-content ul {
+  list-style: none;
+}
+
+.page-container main .main-content ul li {
+  padding: 0.3rem;
+}
+
+.page-container main .main-content ul li::before {
+  content: "";
+}
+
+.page-container main .more-content {
+  padding: 1rem;
+}
+
+.page-container main .more-content h2 {
+  text-align: center;
 }
 
 .page-container footer {
   min-height: 20vh;
-  background-color: #94f;
+  background-color: rgba(0, 0, 0, 0.15);
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,7 +414,7 @@ div.VirtualPage {
   color: #fff;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .page-container footer .owners ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

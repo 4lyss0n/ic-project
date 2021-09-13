@@ -1,5 +1,10 @@
 .page-container {
-    background-color: rgba(0, 0, 0, 0.3);
+    // background-color: rgba(0, 0, 0, 0.55);
+    * {
+        color: $main-text-color;
+        fill: #ddd;
+    }
+
     margin: auto;
     p {
         font-size: 1.2rem;
@@ -7,19 +12,82 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
     header {
-        flex: 1;
-        background-color: red;
+        text-align: center;
+        h1 {
+            font-size: 2.5rem;
+            padding: 2rem;
+        }
     }
+
+    @media (min-width: 600px) {
+        main {
+            max-width: 85%;
+        }
+    }
+
+    @media (max-width: 600px) {
+        main {
+            .main-content {
+                flex-direction: column;
+                section {
+                    margin: 0;
+                    // border-bottom: 1px #000 solid;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 800px) {
+        main {
+            max-width: 75%;
+        }
+    }
+
     main {
         flex: 1;
+        display: flex;
+        flex-direction: column;
+        background-color: $main-background-color;
+        .main-content {
+            display: flex;
+            border-bottom: 1px #000 solid;
+            section {
+                flex: 1;
+                padding: 1rem;
+            }
+            button {
+                max-width: max-content;
+            }
+            // h2 {
+            // text-align: center;
+            // }
+            ul {
+                list-style: none;
+                li {
+                    &::before {
+                        content: "";
+                    }
+                    padding: 0.3rem;
+                }
+            }
+        }
+        .more-content {
+            padding: 1rem;
+            h2 {
+                text-align: center;
+            }
+        }
     }
+
     footer {
         min-height: 20vh;
         background-color: $footer-background-color;
         * {
             color: $footer-text-color;
         }
+        width: 100%;
         display: flex;
         flex-direction: column;
         .owners {
@@ -49,7 +117,7 @@
                 }
             }
 
-            @media (max-width: 500px) {
+            @media (max-width: 600px) {
                 ul {
                     flex-direction: column;
                     align-items: center;

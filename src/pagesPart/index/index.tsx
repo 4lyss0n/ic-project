@@ -2,7 +2,6 @@ import { FunctionComponent } from 'react'
 import Slide from './Slide'
 import Page from './page'
 
-
 interface IProps {
 
 }
@@ -10,7 +9,7 @@ interface IProps {
 const PagePart: FunctionComponent<IProps> = ({ }) => {
     return (
         <>
-            <Slide />
+            {/* <Slide /> */}
             <Page />
         </>
     )

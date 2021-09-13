@@ -14,17 +14,15 @@
         }
         * {
             stroke: #fff;
-            fill: #000;
+            fill: #fff;
         }
         .rotate {
             transform: rotate(90deg);
         }
     }
 
-    .content {
-        background-color: #00000088;
-        color: #ddd;
-    }
+    // .content {
+    // }
 
     .disnable {
         animation: go-in 70ms forwards;
