@@ -17,8 +17,6 @@ const Component: FunctionComponent<IProps> = ({ }) => {
                     <p>Depressão ou trastorno depressivo maior é uma doença comum e séria que afeta negativamente como você se sente, como pensa e como age.</p>
 
                     <p>Contudo, felizmente tambem é tratavel.</p>
-
-                    {/* <h2>Sintomas de Depressão:</h2> */}
                     <ContentBlock title={
                         <h2>Sintomas de Depressão:</h2>
                     }>
